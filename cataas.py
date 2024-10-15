@@ -3,8 +3,6 @@ from PIL import Image, ImageTk
 import requests
 from io import BytesIO
 
-from pygame.examples.cursors import image
-
 
 def load_image(url):
     try:
@@ -21,7 +19,7 @@ def load_image(url):
 
 def open_new_window():
     tag = tag_entry.get()
-    url_tag = f"https://cataas.com/cat/{tag}"
+    url_tag = f"https://cataas.com/cat/{tag}" if tag else "https://cataas.com/cat"
     img = load_image(url_tag)
     if img:
         new_window = Toplevel()
