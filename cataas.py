@@ -48,6 +48,5 @@ file_menu.add_separator()
 file_menu.add_command(label="Выход", command=exit_prog)
 
 url = "https://cataas.com/cat"
-set_image()
 
 window.mainloop()
